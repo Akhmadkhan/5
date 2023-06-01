@@ -1,35 +1,39 @@
-print("Здесь вы можете конвертировать единицы измерения температуры.")
+print("Здесь вы можете конвертировать")
+
 
 def celsius_to_fahrenheit(celsius):
     fahrenheit = (celsius * 9/5) + 32
     return fahrenheit
 
+
 def fahrenheit_to_celsius(fahrenheit):
     celsius = (fahrenheit - 32) * 5/9
     return celsius
 
+
 def main():
     while True:
         print("Выберите опцию:")
-        print("1. Конвертировать из градусов Цельсия в градусы Фаренгейта")
-        print("2. Конвертировать из градусов Фаренгейта в градусы Цельсия")
+        print("1. Конвертировать из г. C в г. F")
+        print("2. Конвертировать из г. C в г. F")
         print("3. Выйти")
 
         option = input("Введите номер опции: ")
 
         if option == "1":
-            celsius = float(input("Введите градусы Цельсия: "))
+            celsius = float(input("Введите г. C: "))
             fahrenheit = celsius_to_fahrenheit(celsius)
-            print(f"{celsius} градусов Цельсия = {fahrenheit} градусов Фаренгейта")
+            print(f"{celsius} г. C = {fahrenheit} г. F")
         elif option == "2":
-            fahrenheit = float(input("Введите градусы Фаренгейта: "))
+            fahrenheit = float(input("Введите г. F: "))
             celsius = fahrenheit_to_celsius(fahrenheit)
-            print(f"{fahrenheit} градусов Фаренгейта = {celsius} градусов Цельсия")
+            print(f"{fahrenheit} г. F = {celsius} г. C")
         elif option == "3":
             print("До свидания!")
             break
         else:
-            print("Неверный номер опции. Попробуйте снова.")
+            print("Неверный номер опции. ")
+
 
 if __name__ == "__main__":
     main()
